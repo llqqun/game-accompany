@@ -1,6 +1,7 @@
 import gymnasium as gym
 from stable_baselines3 import A2C, PPO
 import os
+# 强化学习
 # 初始化环境
 module_dir = './modules/PPO-test'
 module_file_path = f'{module_dir}/LunarLander-v3-500.zip'
@@ -37,7 +38,7 @@ for _ in range(episodes):
 
 # print('查看所有可使用环境配置',gym.pprint_registry())
 
-# 重置环境以生成第一个观察值
+# 单独使用gym环境
 # observation, info = env.reset(seed=42)
 
 # print("初始观察值:", observation, info)
@@ -49,6 +50,7 @@ for _ in range(episodes):
 #         vec_env.render("human")
 #         print("观察值:", reward, done)
 """ 
+    # 单独使用gym环境
     # 这里是插入你的策略的地方
     action = env.action_space.sample()
     # print("当前观察动作:", action)
